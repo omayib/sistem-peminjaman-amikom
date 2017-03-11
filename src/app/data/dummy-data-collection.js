@@ -134,3 +134,66 @@ export const KoleksiInventaris = [{
     name: "Projector SOny 1231",
     jumlah:1
 }];
+
+export const RiwayatPeminjaman =[
+    {
+        "id": 123123,
+        "nama_inventaris": "mobil avanza",
+        "tanggal_pinjam": "12/01/2018",
+        "tanggal_kembali": "12/01/2018",
+        "jam_pinjam": "01:11",
+        "jam_kembali": "15:00",
+        "keperluan": {
+            "acara": "lomba makan",
+            "catatan": ""
+        },
+        "penanggung_jawab": "Paryono"
+    },
+    {
+        "id": 632434,
+        "nama_inventaris": "Ruang 5.1.2",
+        "tanggal_pinjam": "11/01/2018",
+        "tanggal_kembali": "15/01/2018",
+        "jam_pinjam": "09:01",
+        "jam_kembali": "14:00",
+        "keperluan": {
+            "acara": "rapat paripurna",
+            "catatan": ""
+        },
+        "penanggung_jawab": "Paijo"
+    },
+    {
+        "id": 864245,
+        "nama_inventaris": "LCD Proyektor",
+        "tanggal_pinjam": "16/01/2018",
+        "tanggal_kembali": "17/01/2018",
+        "jam_pinjam": "16:01",
+        "jam_kembali": "09:00",
+        "keperluan": {
+            "acara": "hackaton",
+            "catatan": ""
+        },
+        "penanggung_jawab": "Paijo"
+    }
+];
+
+export const PengajuanBaru={
+    "id_local": 123123,
+    "inventaris":[
+        {"id_local":52345,
+            "item":"mobil avanze",
+            "catatan":""
+        },{"id_local":75354,
+            "item":"mobil avanze",
+            "catatan":""
+        }],
+    "tanggal_pinjam": "12/01/2018",
+    "tanggal_kembali": "12/01/2018",
+    "jam_pinjam": "01:11",
+    "jam_kembali": "15:00",
+    "keperluan": {
+        "acara": "lomba makan",
+        "catatan": ""
+    },
+    "penanggung_jawab": "Paryono"
+}
