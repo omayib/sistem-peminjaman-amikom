@@ -19,7 +19,8 @@ export default class Step5 extends Component {
             <div>
                 <div className="row">
                     <form id="Form" className="form-horizontal">
-                        Terimakasih
+                        Inventaris berhasil dipinjam. Terimakasih. <br/>
+                        <link to="/peminjaman" activeClassName="active">Kembali ke daftar peminjaman</link>
                     </form>
                 </div>
             </div>
