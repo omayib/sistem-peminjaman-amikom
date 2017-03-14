@@ -15,11 +15,11 @@ import Step5 from './step5';
 
 const steps =
     [
-        {name: 'Agenda', component: <Step1 />},
-        {name: 'Inventaris', component: <Step2 />},
-        {name: 'Catatan', component: <Step3 />},
-        {name: 'Rangkuman', component: <Step4 />},
-        {name: 'Final', component: <Step5 />}
+        {name: '1. Agenda', component: <Step1 />},
+        {name: '2. Inventaris', component: <Step2 />},
+        {name: '3. Catatan', component: <Step3 />},
+        {name: '4. Rangkuman', component: <Step4 />},
+        {name: '5. Final', component: <Step5 />}
     ]
 
 export class FormPengajuan extends Component{
