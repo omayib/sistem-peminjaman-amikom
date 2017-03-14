@@ -3,6 +3,7 @@
  */
 import React from "react";
 import {Link} from "react-router";
+import '../../css/main.css';
 
 export const Header =(props) => {
         return(
@@ -12,7 +13,7 @@ export const Header =(props) => {
                         <a className="navbar-brand">SIPENIS</a>
                     </div>
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul className="nav navbar-nav">
+                        <ul className="pull-right nav navbar-nav">
                             <li><Link  to="/akun" activeClassName="active">Akun</Link></li>
                             <li><Link  to="/inventaris" activeClassName="active">Inventaris</Link></li>
                             <li><Link  to="/peminjaman" activeClassName="active">Peminjaman</Link></li>
