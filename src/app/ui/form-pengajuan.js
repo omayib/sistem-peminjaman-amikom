@@ -18,24 +18,35 @@ export class FormPengajuan extends Component{
         super(props);
         this.state = {};
 
-        this.sampleStore = {
+        this.dataPengajuan = {
             email: '',
             gender: '',
-            savedToCloud: false
+            savedToCloud: false,
+            eventName:'',
+            pic:'',
+            borrowingDate:'',
+            returningDate:'',
+            borrowingTime:'',
+            returningTime:''
         };
     }
 
     getStore() {
-        return this.sampleStore;
+        return this.dataPengajuan;
     }
 
     updateStore(update) {
-        this.sampleStore = {
-            ...this.sampleStore,
+        this.dataPengajuan = {
+            ...this.dataPengajuan,
             ...update,
         }
 
-        console.log("update store"+this.sampleStore.email)
+        console.log("update store"+this.dataPengajuan.eventName)
+        console.log("update store"+this.dataPengajuan.pic)
+        console.log("update store"+this.dataPengajuan.borrowingDate)
+        console.log("update store"+this.dataPengajuan.returningDate)
+        console.log("update store"+this.dataPengajuan.borrowingTime)
+        console.log("update store"+this.dataPengajuan.returningTime)
     }
 
     render(){
