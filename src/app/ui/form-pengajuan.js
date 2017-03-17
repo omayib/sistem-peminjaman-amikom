@@ -41,13 +41,14 @@ export class FormPengajuan extends Component{
             ...update,
         }
 
-        console.log("update store"+this.dataPengajuan.eventName)
-        console.log("update store"+this.dataPengajuan.pic)
-        console.log("update store"+this.dataPengajuan.borrowingDate)
-        console.log("update store"+this.dataPengajuan.returningDate)
-        console.log("update store"+this.dataPengajuan.borrowingTime)
-        console.log("update store"+this.dataPengajuan.returningTime)
-        console.log("update store"+JSON.stringify(this.dataPengajuan.inventories))
+        console.log("update store eventName: "+this.dataPengajuan.eventName)
+        console.log("update store pic: "+this.dataPengajuan.pic)
+        console.log("update store borrowingDate: "+this.dataPengajuan.borrowingDate)
+        console.log("update store returningDate: "+this.dataPengajuan.returningDate)
+        console.log("update store borrowingTime:"+this.dataPengajuan.borrowingTime)
+        console.log("update store returningTime: "+this.dataPengajuan.returningTime)
+        console.log("update store inventories: "+JSON.stringify(this.dataPengajuan.inventories))
+        console.log("update store note: "+this.dataPengajuan.note)
     }
 
     render(){
