@@ -19,15 +19,15 @@ export class FormPengajuan extends Component{
         this.state = {};
 
         this.dataPengajuan = {
-            email: '',
-            gender: '',
             savedToCloud: false,
             eventName:'',
             pic:'',
             borrowingDate:'',
-            returningDate:'',
             borrowingTime:'',
-            returningTime:''
+            returningDate:'',
+            returningTime:'',
+            inventories:[],
+            note:''
         };
     }
 
@@ -47,6 +47,7 @@ export class FormPengajuan extends Component{
         console.log("update store"+this.dataPengajuan.returningDate)
         console.log("update store"+this.dataPengajuan.borrowingTime)
         console.log("update store"+this.dataPengajuan.returningTime)
+        console.log("update store"+JSON.stringify(this.dataPengajuan.inventories))
     }
 
     render(){
@@ -54,8 +55,8 @@ export class FormPengajuan extends Component{
         const steps =
             [
                 {name: '1. Agenda', component: <Step1 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}}/>},
-                {name: '2. Inventaris', component: <Step2 />},
-                {name: '3. Catatan', component: <Step3 />},
+                {name: '2. Inventaris', component: <Step2 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+                {name: '3. Catatan', component: <Step3 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}}/>},
                 {name: '4. Rangkuman', component: <Step4 />},
                 {name: '5. Final', component: <Step5 />}
             ]
