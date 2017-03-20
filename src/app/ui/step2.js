@@ -11,15 +11,6 @@ const selectRowProp = {
 };
 let inventaries = []
 
-function addOrReplace( argh, obj ) {
-    var index = -1;
-    argh.filter((el, pos) => {
-        if( el.uid == obj.uid )
-            delete argh[index = pos];
-        return true;
-    });
-    argh[index] = obj;
-}
 function onRowSelect(row, isSelected, e){
     alert(`Anda akan meminjam ${row['name']} ?`);
     console.log(row["id"]+"is selected "+isSelected)
@@ -34,7 +25,6 @@ function onRowSelect(row, isSelected, e){
         for (var ind in inventaries){
             var unselectedItem = inventaries[ind];
             if(row['id']===unselectedItem['id']){
-                console.log("id: "+unselectedItem['id']+ "seharusnya dihapus")
                 inventaries.splice(ind,1);
             }
         }

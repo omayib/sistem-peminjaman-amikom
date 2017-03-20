@@ -58,7 +58,7 @@ export class FormPengajuan extends Component{
                 {name: '1. Agenda', component: <Step1 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}}/>},
                 {name: '2. Inventaris', component: <Step2 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
                 {name: '3. Catatan', component: <Step3 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}}/>},
-                {name: '4. Rangkuman', component: <Step4 />},
+                {name: '4. Rangkuman', component: <Step4 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
                 {name: '5. Final', component: <Step5 />}
             ]
 

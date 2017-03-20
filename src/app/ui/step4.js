@@ -2,16 +2,11 @@
  * Created by omayib on 07/03/17.
  */
 import React, { Component } from 'react';
-var moment = require('moment');
 
 
 export default class Step4 extends Component {
-
     constructor(props){
         super(props);
-        this.setState({
-            startDate: moment()
-        });
     }
 
     render() {
@@ -19,10 +14,13 @@ export default class Step4 extends Component {
             <div>
                 <div className="row">
                     <form id="Form" className="form-horizontal">
-                        Nama acara :<label for="nama_acara">Pentas Seni Reog dan Warog</label><br/>
-                        Nama penanggung jawab :<label for="pic">Jokowididi</label><br/>
-                        Tanggal mulai:<label for="mulai">13 Agustus 2013</label><br/>
-                        Tanggal selesai:<label for="selesai">16 Agustus 2013</label><br/>
+                        Acara :<label for="nama_acara">{this.props.getStore().eventName}</label><br/>
+                        Nama penanggung jawab :<label for="pic">{this.props.getStore().pic}</label><br/>
+                        Tanggal dipinjam:<label for="mulai">{this.props.getStore().borrowingDate}</label><br/>
+                        Tanggal dikembalikan:<label for="selesai">{this.props.getStore().returningDate}</label><br/>
+                        Waktu pengambilan:<label for="jamselesai">{this.props.getStore().borrowingTime}</label><br/>
+                        Waktu pengembalian:<label for="jamselesai">{this.props.getStore().returningTime}</label><br/>
+                        Catatan tambahan:<label for="catatan">{this.props.getStore().note}</label><br/>
                     </form>
                 </div>
             </div>

@@ -5,14 +5,18 @@ import React, { Component } from 'react';
 import TimePicker from 'react-times';
 import '../../css/timepicker.css';
 import '../../css/main.css';
+import 'react-datepicker/dist/react-datepicker.css';
 
 var DatePicker = require('react-datepicker');
+
 import Moment from 'moment';
 
 export default class Step1 extends Component {
 
     constructor(props){
         super(props);
+        let borrowingDateFormated='';
+        let returningDateFormated='';
         let borrowingTime = '';
         let returningTime = '';
         this.state = {
@@ -31,8 +35,8 @@ export default class Step1 extends Component {
         return {
             eventName: this.refs.eventName.value,
             pic: this.refs.pic.value,
-            borrowingDate: this.state.borrowingDate,
-            returningDate: this.state.returningDate,
+            borrowingDate: this.state.borrowingDateFormated,
+            returningDate: this.state.returningDateFormated,
             borrowingTime: this.state.borrowingTime,
             returningTime: this.state.returningTime
         };
@@ -58,13 +62,19 @@ export default class Step1 extends Component {
         });
     }
     onBorrowingDateChanged(date){
+        var a = date.format('DD/MM/YYYY');
+        console.log(a)
         this.setState({
-            borrowingDate: date
+            borrowingDate: date,
+            borrowingDateFormated: a
         });
     }
     onReturningDateChanged(date){
+        var a = date.format('DD/MM/YYYY');
+        console.log(a)
         this.setState({
-            returningDate: date
+            returningDate: date,
+            returningDateFormated:a
         });
     }
 
