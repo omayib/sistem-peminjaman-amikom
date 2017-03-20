@@ -39,9 +39,15 @@ export class Inventaris extends React.Component{
     render(){
         return(
             <BootstrapTable data={KoleksiInventaris} cellEdit={ cellEditProp }   deleteRow={ true } insertRow={true} striped hover selectRow={selectRowProp} options={ options }>
-                <TableHeaderColumn dataField='id' isKey>ID</TableHeaderColumn>
-                <TableHeaderColumn dataField='name'>Inventaris</TableHeaderColumn>
-                <TableHeaderColumn dataField='jumlah'>Jumlah</TableHeaderColumn>
+                <TableHeaderColumn row='0' width='75px' rowSpan='2'  dataField='id' isKey={true} autoValue={ true }>ID</TableHeaderColumn>
+                <TableHeaderColumn row='0' width='250px'  rowSpan='2'  dataField='name'>Inventaris</TableHeaderColumn>
+                <TableHeaderColumn row='0' rowSpan='2'  dataField='jumlah'>Jumlah Ketersediaan</TableHeaderColumn>
+                <TableHeaderColumn row='0' rowSpan='2'  dataField='stock_minimum' >Stock minimal</TableHeaderColumn>
+                <TableHeaderColumn row='0' colSpan='4' headerAlign='center' >Hak peminjaman</TableHeaderColumn>
+                <TableHeaderColumn row='1' dataField='untuk_mahasiswa' dataAlign='center' editable={ { type: 'checkbox', options: { values: 'Y:-' } } }>Mahasiswa</TableHeaderColumn>
+                <TableHeaderColumn row='1' dataField='untuk_dosen' dataAlign='center'  editable={ { type: 'checkbox', options: { values: 'Y:-' } } }>Dosen</TableHeaderColumn>
+                <TableHeaderColumn row='1' dataField='untuk_karyawan'dataAlign='center'  editable={ { type: 'checkbox', options: { values: 'Y:-' } } }>Karyawan</TableHeaderColumn>
+                <TableHeaderColumn row='1' dataField='untuk_buma'dataAlign='center'  editable={ { type: 'checkbox', options: { values: 'Y:-' } } }>Buma</TableHeaderColumn>
             </BootstrapTable>
         );
     }

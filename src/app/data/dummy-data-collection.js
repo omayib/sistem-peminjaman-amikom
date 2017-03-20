@@ -116,23 +116,48 @@ export const TransaksiPeminjaman = [{
 export const KoleksiInventaris = [{
     id: 2,
     name: "Ruang 4.5.4",
-    jumlah:1
+    jumlah:1,
+    stock_minimum:2,
+    untuk_mahasiswa:"Y",
+    untuk_dosen:"-",
+    untuk_karyawan:"Y",
+    untuk_buma:"Y"
 }, {
     id: 3,
     name: "Ruang 4.5.1",
-    jumlah:4
+    jumlah:4,
+    stock_minimum:2,
+    untuk_mahasiswa:"Y",
+    untuk_dosen:"-",
+    untuk_karyawan:"-",
+    untuk_buma:"Y"
 }, {
     id: 4,
     name: "Ruang 5.5.1",
-    jumlah:1
+    jumlah:1,
+    stock_minimum:2,
+    untuk_mahasiswa:"-",
+    untuk_dosen:"-",
+    untuk_karyawan:"Y",
+    untuk_buma:"Y"
 }, {
     id: 5,
     name: "Mobil Avanza AB 2321 DS",
-    jumlah:1
+    jumlah:1,
+    stock_minimum:2,
+    untuk_mahasiswa:"Y",
+    untuk_dosen:"-",
+    untuk_karyawan:"-",
+    untuk_buma:"-"
 }, {
     id: 7,
     name: "Projector SOny 1231",
-    jumlah:1
+    jumlah:1,
+    stock_minimum:2,
+    untuk_mahasiswa:"Y",
+    untuk_dosen:"-",
+    untuk_karyawan:"Y",
+    untuk_buma:"Y"
 }];
 
 export const RiwayatPeminjaman =[
