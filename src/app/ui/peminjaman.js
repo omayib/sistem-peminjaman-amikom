@@ -18,6 +18,12 @@ function onRowSelect(row, isSelected, e){
 }
 
 export class Peminjaman extends React.Component{
+
+    constructor(props){
+        super(props);
+
+    }
+
     render(){
         return(
             <div>
